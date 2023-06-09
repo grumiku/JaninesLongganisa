@@ -14,8 +14,151 @@
 .mySlides {display: none}
 
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
+html {
+  font-size: 100%;
+}
 
+body {
+  font-family: acumin-pro, system-ui, sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  align-items: start;
+  min-height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
 
 
 
@@ -106,32 +249,24 @@
  </div>
     </div>
   </div>
-
- 
-<!-- apply-->
-  <div class="w3-container w3-content w3-padding-50" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center"></h2>
-    <p class="w3-opacity w3-center"><i></i></p>
-    <div class="w3-row w3-padding-32">
-
- <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
+<!-- apply -->
+  <div class="w3-container" id="apply" style="margin-top:50px">
+    <h1 class="w3-xxxlarge w3-text-red"><b></b></h1>
+    <p></p>
+    <form action="/action_page.php" target="_blank">
       <div class="w3-section">
-        <label><b>Name</b></label>
-        <input class="w3-input w3-border" type="text" name="FULL NAME" required>
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
       </div>
       <div class="w3-section">
-        <label><b>Email</b></label>
+        <label>Email</label>
         <input class="w3-input w3-border" type="text" name="Email" required>
       </div>
       <div class="w3-section">
-        
+        <label>Location</label>
+        <input class="w3-input w3-border" type="text" name="Location" required>
       </div>
-    <!-- apply-->
-      <div class="w3-section">
-        <label><b>Location</b></label>
-        <input class="w3-input w3-border" type="text" name="LOCATION" required>
-      </div>
+     
     <label><b>Position</b></label>
        
          <div class="row">
@@ -145,7 +280,8 @@
           <option value="Tindero / Tindera">Tindero / Tindera</option>
           <option value=""></option>
         </select>
-    
+
+
    <div class="w3-section">
        <p><b>Resume</b></p>
           <label></label>
@@ -154,12 +290,8 @@
          <input type="file" id="myfile" name="myfile"><br><br>
           </form>
 
- </div>
-
      <button type="submit" class="w3-button w3-block w3-padding-large w3-black w3-margin-bottom">Submit</button>
-    </form> 
-
-
+    </form>  
       </div>
     </div>
   </div>
@@ -180,6 +312,91 @@
 
 
 
+<header>
+  <!-- Content -->
+</header>
+
+<main>
+  <!-- Content -->
+</main>
+
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">Janine's Longganisa</h1>
+        
+    <h2><b>Contact</b></h2>
+    
+    <address>
+      +63-955-0734-859<br>
+          
+      <a class="footer__btn" href="https://www.facebook.com/janine.urbeso?paipv=0&eav=AfaYidYz_mzSd6phZsyf5ZJ3CTia32X0VvdTMaEg5blSPIAi6eDyMN8ALPqF2Acg8vE&_rdr">Facebook</a>
+    </address>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h1 class="nav__title"><b>Quick Links</b></h1>
+
+      <ul class="nav__ul">
+        <li>
+         <a href="https://grumiku.github.io/JaninesLongganisa.github.io/mune.html">MENU</a>
+        </li>
+
+        <li>
+          <a href="https://grumiku.github.io/JaninesLongganisa.github.io/location.html">LOCATION</a>
+        </li>
+            
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title"></h2>
+       <p> </p>
+      
+      <ul class="nav__ul nav__ul--extra">
+        <li>
+          <a href="https://grumiku.github.io/JaninesLongganisa.github.io/delivery.html">DELIVERY</a>
+        </li>
+        
+        <li>
+         <a href="https://grumiku.github.io/JaninesLongganisa.github.io/ca.html">CAREERS</a>
+        </li>
+        
+        <li>
+          <a href=""></a>
+        </li>
+        
+        <li>
+          <a href="https://grumiku.github.io/JaninesLongganisa.github.io/contact.html">CONTACT US</a>
+        </li>
+        
+        <li>
+          <a href="https://grumiku.github.io/JaninesLongganisa.github.io/faq.html">FAQs</a>
+        </li>
+        
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item">
+      
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>Powered by w3.css</p>
+    
+    <div class="legal__links">
+      <span>Uploaded From<span class="heart">♥</span>Github</span>
+    </div>
+  </div>
 </footer>
 
 
